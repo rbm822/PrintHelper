@@ -1,4 +1,4 @@
-package src.main.java.printer;
+package src.main.java;
 
 import java.awt.*;
 import java.io.File;

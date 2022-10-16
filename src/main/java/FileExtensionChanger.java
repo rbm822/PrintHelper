@@ -1,19 +1,13 @@
-package src.main.java.utils;
+package src.main.java;
 
 import java.io.File;
 import java.util.List;
 
 public class FileExtensionChanger {
-    private List<File> files;
-
-    public FileExtensionChanger(List<File> files) {
-        this.files = files;
-    }
-
-    public void changeFileExtension(String current, String desired) {
-        for (File file : files) {
-            String fileName = file.getName().replaceAll(current, desired);
-            file.renameTo(new File(fileName));
-        }
+    public static void changeFileExtension(File file, String desiredExtension) {
+        String current = file.getName();
+        current = current.substring(file.getName().length() - 3, file.getName().length());
+        String fileName = file.getName().replace(current, desiredExtension);
+        file.renameTo(new File(".\\" + fileName));        // Renames file and maintains current dir.
     }
 }

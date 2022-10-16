@@ -1,4 +1,4 @@
-package src.main.java.utils;
+package src.main.java;
 
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.File;
@@ -14,11 +14,11 @@ public class FileLoader {
     public FileLoader(String directory, String fileTypeToLoad) {
         this.directory = directory;
         this.fileTypeToLoad = fileTypeToLoad;
-        this.extensionFilter = new FileNameExtensionFilter("PDF", fileTypeToLoad);
+        this.extensionFilter = new FileNameExtensionFilter("Text", fileTypeToLoad);
         this.validatedFileList = new ArrayList<>();
     }
 
-    public List<File> getFilesFromDirectory() {
+    public List<File> getFiles() {
         File[] filesFromDirectory = new File(directory).listFiles();
 
         for (File file : filesFromDirectory) {
