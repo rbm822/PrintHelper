@@ -48,7 +48,7 @@ public class User{
    
    private void addElements() {     
             
-     // ADD LIST OF EXTENSIONS TO LEFT SIDE
+     // ADD LIST OF ACTIONS TO LEFT SIDE
       panelActions = new JPanel();
       panelActions.setLayout(new BoxLayout(panelActions, BoxLayout.Y_AXIS));
       frameMain.add(panelActions, BorderLayout.WEST);
@@ -58,7 +58,7 @@ public class User{
       panelActions.add(createPrintButton());
       
       
-      // ADD LIST OF ACTIONS TO RIGHT SIDE
+      // ADD LIST OF EXTENSIONS TO RIGHT SIDE
       panelExtensions = new JPanel();
       panelExtensions.setLayout(new BoxLayout(panelExtensions, BoxLayout.Y_AXIS));
       frameMain.add(panelExtensions, BorderLayout.EAST);
@@ -157,6 +157,7 @@ public class User{
       else {
         
       }
+      frameMain.pack();
       //////////////////////////////////////////////////////
   
    }
